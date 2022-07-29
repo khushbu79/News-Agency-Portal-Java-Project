@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="141.0" minWidth="200.0" opacity="0.74" prefHeight="420.0" prefWidth="566.0" style="-fx-background-color: tan; -fx-border-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billcollector.BillCollViewController">
+   <children>
+      <ImageView fitHeight="420.0" fitWidth="566.0" opacity="0.37">
+         <image>
+            <Image url="@../../../../Downloads/newsppbg.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="158.0" layoutY="26.0" style="-fx-background-color: BEIGE;" text="BILL COLLECTOR" textAlignment="CENTER" textFill="#0f0000">
+         <font>
+            <Font name="Lucida Fax Demibold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="99.0" text="MOBILE NUMBER" textFill="#240101">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMoblile" layoutX="247.0" layoutY="97.0" promptText="Enter mobile no" />
+      <Button layoutX="257.0" layoutY="151.0" mnemonicParsing="false" onAction="#doFetch" prefHeight="34.0" prefWidth="69.0" text="FETCH" textFill="#350562">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="80.0" layoutY="228.0" text="AMOUNT" textFill="#240101">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTotal" layoutX="247.0" layoutY="226.0" promptText="TOTAL COST TO BE PAID" />
+      <Button layoutX="257.0" layoutY="275.0" mnemonicParsing="false" onAction="#doPaid" prefHeight="34.0" prefWidth="69.0" text="PAID" textFill="#350562">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="62.0" fitWidth="117.0" layoutX="31.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/npclipart.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="103.0" fitWidth="98.0" layoutX="439.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/billclipart.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="14.0" layoutY="333.0" mnemonicParsing="false" onAction="#doClear" prefHeight="29.0" prefWidth="69.0" text="CLEAR" textFill="#350562">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClose" layoutX="482.0" layoutY="333.0" mnemonicParsing="false" onAction="#doClose" prefHeight="29.0" prefWidth="69.0" text="CLOSE" textFill="#350562">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="14.0" />
+         </font>
+      </Button>
+      <Separator layoutX="4.0" layoutY="317.0" prefHeight="5.0" prefWidth="559.0" />
+      <Separator layoutX="4.0" layoutY="370.0" prefHeight="5.0" prefWidth="559.0" />
+      <HBox fx:id="btnExit" layoutY="375.0" onMouseClicked="#doExit" prefHeight="41.0" prefWidth="137.0">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <children>
+            <FontAwesomeIcon glyphName="ARROW_CIRCLE_LEFT" size="20">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label text="Back to Panel">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Rockwell" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+   </children>
+</AnchorPane>

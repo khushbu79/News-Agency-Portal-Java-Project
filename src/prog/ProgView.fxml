@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="300.0" minWidth="200.0" prefHeight="530.0" prefWidth="613.0" style="-fx-background-color: #a8bec2;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prog.ProgViewController">
+   <children>
+      <ImageView fitHeight="530.0" fitWidth="397.0" layoutX="113.0">
+         <image>
+            <Image url="@../../../../Downloads/we%20are%20growing%20every%20day.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="47.0" layoutY="56.0" prefHeight="41.0" prefWidth="87.0" text="1500+">
+         <font>
+            <Font name="Century" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="98.0" text="CUSTOMERS">
+         <font>
+            <Font name="Candara Light" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="487.0" layoutY="56.0" prefHeight="41.0" prefWidth="87.0" text="150+">
+         <font>
+            <Font name="Century" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="487.0" layoutY="98.0" text="NEWSPAPERS">
+         <font>
+            <Font name="Candara Light" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="328.0" prefHeight="41.0" prefWidth="87.0" text="690+">
+         <font>
+            <Font name="Century" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="369.0" text="ADMINS">
+         <font>
+            <Font name="Candara Light" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="499.0" layoutY="328.0" prefHeight="41.0" prefWidth="87.0" text="220+">
+         <font>
+            <Font name="Century" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="516.0" layoutY="369.0" text="HAWKERS">
+         <font>
+            <Font name="Candara Light" size="19.0" />
+         </font>
+      </Label>
+      <HBox fx:id="btnExit" layoutY="488.0" onMouseClicked="#doExit" prefHeight="41.0" prefWidth="137.0">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <children>
+            <FontAwesomeIcon glyphName="ARROW_CIRCLE_LEFT" size="20">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label text="Back to Panel">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Rockwell" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="517.0" minWidth="600.0" prefHeight="537.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.DashBoardViewController">
+   <children>
+      <Label layoutX="262.0" layoutY="27.0" text="AGENCY CONTROL PANEL">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="82.0" fitWidth="162.0" layoutX="14.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="167.0" layoutY="68.0" prefHeight="0.0" prefWidth="551.0" />
+      <HBox layoutX="-2.0" layoutY="70.0" prefHeight="34.0" prefWidth="174.0" style="-fx-background-color: TAN; -fx-background-radius: 0 20 20 0;">
+         <children>
+            <FontAwesomeIcon fill="#800000" glyphName="LASTFM" size="18">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label style="-fx-font-family: century; -fx-text-fill: #800000;" text="Welcome Admin">
+               <font>
+                  <Font name="Century" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="9.0" top="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="4.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="167.0" layoutY="123.0" prefHeight="100.0" prefWidth="645.0">
+         <children>
+            <VBox fx:id="pm" alignment="CENTER" minWidth="90.0" onMouseClicked="#doPapers" prefHeight="124.0" prefWidth="149.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="19.0" prefWidth="141.0" text="Paper master" textFill="#121212">
+                           <font>
+                              <Font name="Century" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin></Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="ANGLE_DOUBLE_DOWN" size="15" />
+                           </children></HBox>
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@npp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0">
+                     <color>
+                        <Color red="0.7543859481811523" green="0.7427442073822021" blue="0.7427442073822021" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox fx:id="btnHawker" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#doHawker" prefHeight="132.0" prefWidth="157.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="147.0" text="Hawker Details">
+                           <font>
+                              <Font name="Century" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin></Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="ANGLE_DOUBLE_DOWN" layoutX="40.0" layoutY="26.0" size="15" />
+                           </children></HBox>
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@hawker.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0">
+                     <color>
+                        <Color red="0.7543859481811523" green="0.7427442073822021" blue="0.7427442073822021" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox fx:id="btnCust" alignment="CENTER" layoutX="555.0" layoutY="10.0" onMouseClicked="#doCust" prefHeight="126.0" prefWidth="147.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label onMouseClicked="#doCust" prefHeight="18.0" prefWidth="190.0" text="Customer details">
+                           <font>
+                              <Font name="Century" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin></Label>
+                        <FontAwesomeIcon glyphName="ANGLE_DOUBLE_DOWN" size="15">
+                           <HBox.margin>
+                              <Insets top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="72.0" />
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cust.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0">
+                     <color>
+                        <Color red="0.7543859481811523" green="0.7427442073822021" blue="0.7427442073822021" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="167.0" layoutY="314.0" prefHeight="100.0" prefWidth="645.0">
+         <children>
+            <VBox fx:id="btngen" alignment="CENTER" minWidth="110.0" onMouseClicked="#doBillGen" prefHeight="126.0" prefWidth="85.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="19.0" prefWidth="161.0" text="Bill Generator" textFill="#121212">
+                           <font>
+                              <Font name="Century" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="29.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="ANGLE_DOUBLE_DOWN" size="15">
+                                 <HBox.margin>
+                                    <Insets bottom="17.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                           </children></HBox>
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="64.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@bill.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0">
+                     <color>
+                        <Color red="0.7543859481811523" green="0.7427442073822021" blue="0.7427442073822021" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox fx:id="btnColl" alignment="CENTER" layoutX="10.0" layoutY="10.0" minWidth="120.0" onMouseClicked="#doCollector" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="147.0" text="Bill Collector">
+                           <font>
+                              <Font name="Century" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="37.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="ANGLE_DOUBLE_DOWN" size="15">
+                                 <HBox.margin>
+                                    <Insets bottom="12.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                           </children></HBox>
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="92.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@money.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0">
+                     <color>
+                        <Color red="0.7543859481811523" green="0.7427442073822021" blue="0.7427442073822021" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox fx:id="btnProg" alignment="CENTER" layoutX="555.0" layoutY="10.0" onMouseClicked="#doprog" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="183.0" text="Our Progress!">
+                           <font>
+                              <Font name="Century" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="23.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="72.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="ANGLE_DOUBLE_DOWN" size="15" />
+                           </children></HBox>
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="88.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@progress-01_preview_ccea.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0">
+                     <color>
+                        <Color red="0.7543859481811523" green="0.7427442073822021" blue="0.7427442073822021" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox layoutY="103.0" maxHeight="1.7976931348623157E308" prefHeight="417.0" prefWidth="174.0" style="-fx-background-color: white; -fx-background-radius: 0 20 0 0;">
+         <children>
+            <HBox fx:id="npRec" alignment="CENTER_LEFT" onMouseClicked="#donpList">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <children>
+                  <FontAwesomeIcon glyphName="LIST" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="13.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Newspaper Record">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="hawkRec" alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0" onMouseClicked="#dohawkList">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIcon glyphName="LIST" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="13.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hawker Record">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="btnRecCust" alignment="CENTER_LEFT" layoutX="10.0" layoutY="86.0" onMouseClicked="#doRecCust">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIcon glyphName="LIST" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="13.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Record">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <VBox />
+            <HBox fx:id="btnDev" alignment="BOTTOM_LEFT" onMouseClicked="#dodev" prefHeight="37.0" prefWidth="174.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <FontAwesomeIcon glyphName="GROUP" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Know the Developer">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="btnLogout" alignment="CENTER_LEFT" onMouseClicked="#doLogout" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIcon glyphName="LOCK" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="13.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="10.0" right="6.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets top="180.0" />
+               </VBox.margin>
+            </HBox>
+         </children></VBox>
+      <Separator layoutX="175.0" layoutY="301.0" prefHeight="3.0" prefWidth="659.0" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="500.0" minWidth="499.0" prefHeight="506.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billing.BillingViewController">
+   <children>
+      <ImageView fitHeight="505.0" fitWidth="500.0" opacity="0.43">
+         <image>
+            <Image url="@../../../../Downloads/bgg.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="126.0" layoutY="23.0" text="BILL GENERATOR" textAlignment="CENTER">
+         <font>
+            <Font name="Bookman Old Style Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="126.0" text="TOTAL PRICE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboMob" layoutX="114.0" layoutY="78.0" prefWidth="150.0" />
+      <Button layoutX="296.0" layoutY="78.0" mnemonicParsing="false" onAction="#doFetch" text="FETCH" textFill="#86182a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="42.0" layoutY="80.0" text="MOBILE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="126.0" text="START DATE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrice" layoutX="40.0" layoutY="156.0" />
+      <TextField fx:id="txtStrDate" layoutX="252.0" layoutY="156.0" />
+      <Label layoutX="42.0" layoutY="201.0" text="BILLING DATE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateBill" layoutX="28.0" layoutY="229.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="219.0" layoutY="201.0" text="Days Skipped">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSkip" layoutX="222.0" layoutY="229.0" prefHeight="25.0" prefWidth="55.0" />
+      <Button layoutX="368.0" layoutY="214.0" mnemonicParsing="false" onAction="#doCalDays" text="TOTAL DAYS" textFill="#86182a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="44.0" layoutY="274.0" text="TOTAL DAYS">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDaysTotal" layoutX="175.0" layoutY="272.0" prefHeight="25.0" prefWidth="127.0" />
+      <Button layoutX="200.0" layoutY="319.0" mnemonicParsing="false" onAction="#doGenerate" text="GENERATE BILL" textAlignment="CENTER" textFill="#86182a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtAmout" layoutX="189.0" layoutY="366.0" />
+      <Label layoutX="73.0" layoutY="368.0" text="AMOUNT:">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <TextField layoutX="160.0" layoutY="366.0" prefHeight="25.0" prefWidth="30.0" text="Rs." />
+      <Button fx:id="btnClose" layoutX="338.0" layoutY="423.0" mnemonicParsing="false" onAction="#doClose" text="CLOSE" textAlignment="RIGHT" textFill="#86182a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSave" layoutX="74.0" layoutY="423.0" mnemonicParsing="false" onAction="#doSave" text="SAVE" textAlignment="CENTER" textFill="#86182a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Separator layoutY="408.0" prefHeight="7.0" prefWidth="500.0" />
+      <Separator layoutY="460.0" prefHeight="7.0" prefWidth="500.0" />
+      <HBox fx:id="btnExit" layoutY="464.0" onMouseClicked="#doExit" prefHeight="41.0" prefWidth="137.0">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <children>
+            <FontAwesomeIcon glyphName="ARROW_CIRCLE_LEFT" size="20">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label text="Back to Panel">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Rockwell" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+   </children>
+</AnchorPane>

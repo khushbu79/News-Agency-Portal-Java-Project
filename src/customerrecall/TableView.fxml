@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="500.0" minWidth="500.0" opacity="0.55" prefHeight="619.0" prefWidth="640.0" style="-fx-background-color: tan;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customerrecall.TableViewController">
+   <children>
+      <Label layoutX="198.0" text="CUSTOMER INFORMATION">
+         <font>
+            <Font name="Javanese Text" size="24.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#190606" fontSmoothingType="LCD" glyphName="TABLE" layoutX="151.0" layoutY="40.0" selectionFill="BLACK" size="18" text="" />
+      <Separator layoutX="179.0" layoutY="14.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="14.0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="84.0" mnemonicParsing="false" onAction="#doshowP" prefHeight="30.0" prefWidth="118.0" text="      Show Details" textFill="#940404">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <FontAwesomeIcon fill="#190606" fontSmoothingType="LCD" glyphName="DATABASE" layoutX="465.0" layoutY="105.0" selectionFill="BLACK" size="16" />
+      <TableView fx:id="tbl" layoutX="38.0" layoutY="157.0" prefHeight="385.0" prefWidth="563.0" style="-fx-background-color: BLACK;">
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0">
+               <color>
+                  <Color red="0.3245614171028137" green="0.19633960723876953" blue="0.19633960723876953" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TableView>
+      <HBox fx:id="btnExit" layoutY="582.0" onMouseClicked="#doExit" prefHeight="41.0" prefWidth="137.0">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <children>
+            <FontAwesomeIcon glyphName="ARROW_CIRCLE_LEFT" size="20">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label text="Back to Panel">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Rockwell" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <Text layoutX="103.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BILLING INFO">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="15.0" />
+         </font>
+      </Text>
+      <Separator layoutX="113.0" layoutY="64.0" prefHeight="6.0" prefWidth="429.0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="329.0" layoutY="121.0" mnemonicParsing="false" onAction="#doFind" prefHeight="25.0" prefWidth="55.0" text="   Find" textFill="#940404">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <FontAwesomeIcon fill="#190606" fontSmoothingType="LCD" glyphName="NEUTER" layoutX="331.0" layoutY="141.0" selectionFill="BLACK" size="16" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="556.0" layoutY="582.0" mnemonicParsing="false" onAction="#doClear" prefHeight="28.0" prefWidth="75.0" text="      Reset" textFill="#940404">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <FontAwesomeIcon fill="#190606" fontSmoothingType="LCD" glyphName="REFRESH" layoutX="564.0" layoutY="601.0" selectionFill="BLACK" size="16" />
+      <RadioButton fx:id="radPaid" layoutX="236.0" layoutY="90.0" mnemonicParsing="false" onAction="#doPaid" text="PAID" />
+      <RadioButton fx:id="rsdNoPaid" layoutX="337.0" layoutY="90.0" mnemonicParsing="false" onAction="#doNotPaid" text="UN-PAID" />
+      <Text layoutX="105.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AREA">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="15.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="comboArea" layoutX="156.0" layoutY="122.0" prefWidth="150.0" promptText="Select Area" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="120.0" mnemonicParsing="false" onAction="#doShow" prefHeight="30.0" prefWidth="97.0" text="      Show All" textFill="#940404">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <FontAwesomeIcon fill="#190606" fontSmoothingType="LCD" glyphName="DATABASE" layoutX="414.0" layoutY="140.0" selectionFill="BLACK" size="16" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="249.0" layoutY="554.0" mnemonicParsing="false" onAction="#doExcel" prefHeight="28.0" prefWidth="157.0" text="      Export to Excel Sheet" textFill="#940404">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <FontAwesomeIcon glyphName="TRUCK" layoutX="258.0" layoutY="572.0" size="1.2em" />
+   </children>
+</AnchorPane>

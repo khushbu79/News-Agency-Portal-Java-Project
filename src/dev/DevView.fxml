@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane minHeight="419.0" minWidth="459.0" prefHeight="500.0" prefWidth="568.0" style="-fx-background-color: coral;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="dev.DevViewController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="568.0">
+         <image>
+            <Image url="@../../../../Downloads/leaves%20bg.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="172.0" layoutY="26.0" style="-fx-background-color: TAN;" text="MEET THE DEVELPOR">
+         <font>
+            <Font name="Century" size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="110.0" layoutY="67.0" prefHeight="5.0" prefWidth="374.0" />
+      <ImageView fitHeight="120.0" fitWidth="127.0" layoutX="96.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@WhatsApp%20Image%202021-04-23%20at%203.23.10%20PM.jpeg" />
+         </image>
+      </ImageView>
+      <TextArea editable="false" layoutX="250.0" layoutY="90.0" prefHeight="177.0" prefWidth="203.0" text="Hello! I'm Khushbu Garg, a second&#10;year BE student from Thapar &#10;Institute of Engineering&#10;and Technology.&#10;&#10;Email- &#10; khushbugarg79@gmail.com&#10;Contact no-&#10; 9988186000 ">
+         <font>
+            <Font name="Candara" size="12.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="44.0" layoutY="321.0" style="-fx-background-color: TAN;" text="Under the Guidance of:">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="120.0" fitWidth="127.0" layoutX="326.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sirrrrrrrr.jpg" />
+         </image>
+      </ImageView>
+      <TextArea editable="false" layoutX="96.0" layoutY="353.0" prefHeight="97.0" prefWidth="191.0" text="Name- Mr. Rajesh Bansal&#10;&#10;Author of the book-&#10;REAL JAVA.&#10;" />
+      <Separator layoutX="227.0" layoutY="90.0" orientation="VERTICAL" prefHeight="156.0" prefWidth="1.0" />
+      <Separator layoutX="300.0" layoutY="324.0" orientation="VERTICAL" prefHeight="156.0" prefWidth="1.0" />
+      <HBox fx:id="btnExit" layoutY="459.0" onMouseClicked="#doExit" prefHeight="41.0" prefWidth="137.0">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <children>
+            <FontAwesomeIcon glyphName="ARROW_CIRCLE_LEFT" size="20">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label text="Back to Panel">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Rockwell" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+   </children>
+</AnchorPane>

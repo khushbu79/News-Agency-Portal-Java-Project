@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" minHeight="500.0" minWidth="500.0" prefHeight="544.0" prefWidth="567.0" style="-fx-background-color: tan;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hawkers.HawkersViewController">
+   <children>
+      <ImageView fitHeight="544.0" fitWidth="567.0" opacity="0.38">
+         <image>
+            <Image url="@../newspaper.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="140.0" layoutY="32.0" style="-fx-background-color: beige;" text="HAWKER'S MANAGER" textFill="#000000d5">
+         <font>
+            <Font name="Bodoni MT Black" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="324.0" layoutY="90.0" text="HAWKER NAME">
+         <font>
+            <Font name="Bookman Old Style Bold" size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-2.0" layoutY="68.0" prefHeight="11.0" prefWidth="567.0" />
+      <ComboBox fx:id="comboName" editable="true" layoutX="261.0" layoutY="120.0" prefHeight="25.0" prefWidth="203.0" />
+      <Label layoutX="346.0" layoutY="158.0" text="IMAGE PATH">
+         <font>
+            <Font name="Bookman Old Style Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPath" layoutX="261.0" layoutY="192.0" prefHeight="25.0" prefWidth="203.0" />
+      <Button layoutX="483.0" layoutY="120.0" mnemonicParsing="false" onAction="#doSearch" text="SEARCH">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="img" fitHeight="92.0" fitWidth="103.0" layoutX="83.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="102.0" layoutY="192.0" mnemonicParsing="false" onAction="#doBrowsePic" text="BROWSE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="42.0" layoutY="236.0" text="ADDRESS">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAdd" layoutX="42.0" layoutY="264.0" prefHeight="25.0" prefWidth="425.0" />
+      <Label layoutX="42.0" layoutY="303.0" text="CONTACT NO.">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNo" layoutX="42.0" layoutY="322.0" />
+      <Label layoutX="296.0" layoutY="303.0" text="DATE OF JOINING">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateJoin" layoutX="296.0" layoutY="322.0" prefHeight="19.0" prefWidth="175.0" />
+      <Label layoutX="42.0" layoutY="374.0" text="AREAS">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboArea" editable="true" layoutX="42.0" layoutY="393.0" onAction="#fillServe" prefWidth="150.0" />
+      <Label layoutX="296.0" layoutY="375.0" text="SERVING IN-">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtServe" editable="false" layoutX="298.0" layoutY="393.0" prefHeight="25.0" prefWidth="175.0" />
+      <Separator layoutX="-2.0" layoutY="432.0" prefHeight="11.0" prefWidth="567.0" />
+      <Button layoutX="38.0" layoutY="459.0" mnemonicParsing="false" onAction="#doNew" prefHeight="25.0" prefWidth="66.0" text="NEW" />
+      <Button layoutX="399.0" layoutY="459.0" mnemonicParsing="false" onAction="#doDelete" prefHeight="25.0" prefWidth="131.0" text="FIRED/RESIGNED" />
+      <Button layoutX="261.0" layoutY="459.0" mnemonicParsing="false" onAction="#doUpdate" prefHeight="25.0" prefWidth="103.0" text="MODIFY" />
+      <Button layoutX="141.0" layoutY="459.0" mnemonicParsing="false" onAction="#doSave" prefHeight="25.0" prefWidth="89.0" text="RECORD" />
+      <Separator layoutY="495.0" prefHeight="11.0" prefWidth="567.0" />
+      <HBox fx:id="btnExit" layoutX="2.0" layoutY="506.0" onMouseClicked="#doExit" prefHeight="41.0" prefWidth="137.0">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <children>
+            <FontAwesomeIcon glyphName="ARROW_CIRCLE_LEFT" size="20">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label text="Back to Panel">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Rockwell" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+   </children>
+</AnchorPane>

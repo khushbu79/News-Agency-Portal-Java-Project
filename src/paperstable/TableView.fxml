@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane minHeight="491.0" minWidth="500.0" opacity="0.55" prefHeight="491.0" prefWidth="500.0" style="-fx-background-color: tan;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paperstable.TableViewController">
+   <children>
+      <Label layoutX="137.0" text="PAPER INFORMATION">
+         <font>
+            <Font name="Javanese Text" size="24.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#190606" fontSmoothingType="LCD" glyphName="TABLE" layoutX="102.0" layoutY="40.0" selectionFill="BLACK" size="18" />
+      <Button fx:id="btnShow" alignment="CENTER" contentDisplay="CENTER" layoutX="224.0" layoutY="67.0" mnemonicParsing="false" onAction="#doShow" prefHeight="25.0" prefWidth="71.0" text="      Show" textFill="#940404">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <FontAwesomeIcon fill="#190606" fontSmoothingType="LCD" glyphName="DATABASE" layoutX="233.0" layoutY="86.0" selectionFill="BLACK" size="14" />
+      <TableView fx:id="tbl" layoutX="35.0" layoutY="126.0" prefHeight="313.0" prefWidth="432.0" style="-fx-background-color: BLACK;">
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0">
+               <color>
+                  <Color red="0.3245614171028137" green="0.19633960723876953" blue="0.19633960723876953" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TableView>
+      <HBox fx:id="btnExit" layoutX="-9.0" layoutY="449.0" onMouseClicked="#doExit" prefHeight="41.0" prefWidth="137.0">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <children>
+            <FontAwesomeIcon glyphName="ARROW_CIRCLE_LEFT" size="20">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label text="Back to Panel">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Rockwell" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <Separator layoutX="125.0" layoutY="14.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>
